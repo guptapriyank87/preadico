@@ -58,7 +58,7 @@ class ResetPassword extends Component {
     // const data = { email: this.state.email, };
     // console.log(data)
     axios
-      .post("https://pgrdemo.herokuapp.com/updatePassword", this.state)
+      .post("https://praedicotest.herokuapp.com/updatePassword", this.state)
       .then((result) => {
         NotificationManager.success(result.data.msg);
       })

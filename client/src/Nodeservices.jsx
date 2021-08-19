@@ -1,5 +1,5 @@
 var axios = require("axios");
-var ServerUrl = "https://pgrdemo.herokuapp.com/";
+var ServerUrl = "https://praedicotest.herokuapp.com/";
 
 const getLoginList = async (url) => {
   try {

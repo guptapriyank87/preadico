@@ -177,7 +177,7 @@ export default function Tables({ history, whole, setwhole, name }) {
   const dispatch = useDispatch();
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const API = axios.create({ baseURL: "https://pgrdemo.herokuapp.com" });
+    const API = axios.create({ baseURL: "https://praedicotest.herokuapp.com" });
     API.interceptors.request.use((req) => {
       if (localStorage.getItem("profile")) {
         req.headers.Authorization = `Bearer ${
@@ -261,7 +261,7 @@ export default function Tables({ history, whole, setwhole, name }) {
       };
       setloading(true);
       axios
-        .get(`https://pgrdemo.herokuapp.com/users/first/${name}`, {
+        .get(`https://praedicotest.herokuapp.com/users/first/${name}`, {
           headers,
         })
         .then((res) => {
@@ -288,7 +288,7 @@ export default function Tables({ history, whole, setwhole, name }) {
           console.log("error");
         });
       axios
-        .get(`https://pgrdemo.herokuapp.com/users/data/${name}`, {
+        .get(`https://praedicotest.herokuapp.com/users/data/${name}`, {
           headers,
         })
         .then((res) => {
